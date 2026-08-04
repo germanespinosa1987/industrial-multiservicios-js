@@ -1,0 +1,66 @@
+@media (max-width: 991px) {
+    header #menu-hamburguesa {
+        display: block;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    .layout {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 780px) {
+    .grilla {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 200px);
+        grid-template-areas:
+            "area1 area2"
+            "area3 area4"
+            "area5 area6";
+    }
+}
+
+@media (max-width: 480px) {
+    .grilla {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 200px);
+        grid-template-areas:
+            "area1"
+            "area2"
+            "area3"
+            "area4"
+            "area5"
+            "area6";
+    }
+
+    .card img {
+        height: 150px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .aplicaciones .grid-aplicaciones {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .aplicaciones .grid-aplicaciones {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 1024px) {
+    .productos .grid-productos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .productos .grid-productos {
+        grid-template-columns: 1fr;
+    }
+}

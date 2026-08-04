@@ -1,0 +1,8 @@
+@use '../base/variables' as var;
+
+.mi-footer {
+    background: var.$secondaryColor;
+    color: white;
+    padding: 10px;
+    
+}

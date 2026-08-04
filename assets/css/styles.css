@@ -1,0 +1,409 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: linear-gradient(135deg, #282848, #252541);
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media (max-width: 991px) {
+  .layout {
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+  }
+}
+
+.mi-header {
+  background: linear-gradient(135deg, #0f172a, #1e293b) !important;
+  padding: 10px 30px;
+  box-shadow: 0 10px 20px rgba(128, 128, 128, 0.383);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.mi-header nav ul {
+  list-style: none;
+  display: flex;
+  column-gap: 10px;
+}
+.mi-header nav ul li a {
+  text-decoration: none;
+  color: rgb(85, 121, 194);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.mi-header nav ul li:hover .submenu {
+  display: block;
+}
+.mi-header nav ul .lista {
+  position: relative;
+}
+.mi-header nav ul .lista .submenu {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: -10px;
+  padding: 10px;
+  width: 180px;
+  background-color: rgba(245, 245, 220, 0.837);
+}
+.mi-header nav ul .lista .submenu li {
+  margin-bottom: 5px;
+}
+.mi-header #menu-hamburguesa {
+  display: none;
+}
+
+main {
+  flex: 1;
+  padding: 30px 0;
+}
+
+.mi-footer {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+  padding: 10px;
+}
+
+.grilla img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.grilla {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 200px 200px;
+  justify-content: center;
+  grid-template-areas: "area1 area2 area3" "area4 area5 area6";
+  gap: 10px;
+}
+
+.contenedor-1 {
+  grid-area: area1;
+}
+
+.contenedor-2 {
+  grid-area: area2;
+}
+
+.contenedor-3 {
+  grid-area: area3;
+}
+
+.contenedor-4 {
+  grid-area: area4;
+}
+
+.contenedor-5 {
+  grid-area: area5;
+}
+
+.contenedor-6 {
+  grid-area: area6;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #222;
+  color: white;
+  padding: 15px;
+  justify-items: center;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(227, 222, 222, 0.3);
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+@media (max-width: 991px) {
+  .sidebar {
+    padding: 10px;
+    justify-self: center;
+    margin: 10px;
+    width: 100%;
+    text-align: center;
+    max-width: none;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(227, 222, 222, 0.3);
+  }
+}
+.card-base, .productos .card-producto, .card-aplicacion {
+  background: #1f1f2e;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(6px);
+  filter: brightness(0.9);
+}
+.card-base img, .productos .card-producto img, .card-aplicacion img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.card-base .contenido, .productos .card-producto .contenido, .card-aplicacion .contenido {
+  padding: 18px;
+}
+.card-base .contenido h3, .productos .card-producto .contenido h3, .card-aplicacion .contenido h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #fff;
+}
+.card-base .contenido p, .productos .card-producto .contenido p, .card-aplicacion .contenido p {
+  font-size: 0.9rem;
+  color: #bbb;
+}
+.card-base:hover, .productos .card-producto:hover, .card-aplicacion:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+.btn-primary {
+  background-color: rgb(85, 121, 194);
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: rgb(85, 121, 194);
+  opacity: 0.8;
+}
+
+.card-aplicacion img {
+  height: 160px;
+}
+
+.grid-aplicaciones {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.banner-aplicaciones {
+  margin: 80px 0;
+  padding: 50px 30px;
+  text-align: center;
+  background: linear-gradient(135deg, #1a1a2e, #202040);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+.banner-aplicaciones h2 {
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+.banner-aplicaciones p {
+  color: #b5b5c3;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cta-aplicaciones {
+  text-align: center;
+  padding: 70px 20px;
+  background: rgba(255, 255, 255, 0.02);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.cta-aplicaciones h2 {
+  color: #fff;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+}
+.cta-aplicaciones .btn {
+  background: linear-gradient(135deg, #3a7bd5, #00c6ff);
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  color: #fff;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.cta-aplicaciones .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 198, 255, 0.4);
+}
+
+.productos {
+  padding: 20px 20px 20px 20px;
+}
+.productos .grid-productos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.productos .card-producto img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.productos .card-producto .card-content {
+  padding: 20px;
+}
+.productos .card-producto .card-content h3 {
+  margin-bottom: 10px;
+  color: #fff;
+}
+.productos .card-producto .card-content p {
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: #ccc;
+}
+.productos .card-producto .card-content .btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background: #4e73df;
+  border-radius: 6px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.contacto {
+  padding: 80px 0;
+}
+
+.contact-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #1f1f2e;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.contact-info {
+  padding: 40px;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: #fff;
+}
+.contact-info h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+.contact-info p {
+  margin-bottom: 25px;
+  color: #e0e7ff;
+}
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+.contact-info ul li {
+  margin-bottom: 10px;
+}
+
+.contact-form {
+  padding: 40px;
+  display: flex;
+  align-items: center;
+}
+.contact-form form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: #2a2a3d;
+  color: #fff;
+}
+.contact-form button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #4f46e5;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.contact-form button:hover {
+  background: #6366f1;
+}
+
+@media (max-width: 768px) {
+  .contact-card {
+    grid-template-columns: 1fr;
+  }
+}
+#animaciones .caja {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  margin: 20px;
+}
+
+@media (max-width: 991px) {
+  header #menu-hamburguesa {
+    display: block;
+  }
+  header nav {
+    display: none;
+  }
+  .layout {
+    flex-direction: column;
+  }
+}
+@media (max-width: 780px) {
+  .grilla {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 200px);
+    grid-template-areas: "area1 area2" "area3 area4" "area5 area6";
+  }
+}
+@media (max-width: 480px) {
+  .grilla {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 200px);
+    grid-template-areas: "area1" "area2" "area3" "area4" "area5" "area6";
+  }
+  .card img {
+    height: 150px;
+  }
+}
+@media (max-width: 1024px) {
+  .aplicaciones .grid-aplicaciones {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .aplicaciones .grid-aplicaciones {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 1024px) {
+  .productos .grid-productos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .productos .grid-productos {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

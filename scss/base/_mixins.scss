@@ -1,0 +1,18 @@
+@mixin boton($color1, $color2) {
+    background: linear-gradient(135deg, $color1, $color2);
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: 600;
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba($color2, 0.4);
+    }
+}
+
+@mixin sombra {
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,39 @@
+@use '../base/variables' as vars;
+
+.card-base {
+    background: vars.$cardsColor;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(6px);
+    filter: brightness(0.9);
+
+    img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+    }
+
+    .contenido {
+        padding: 18px;
+
+        h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        p {
+            font-size: 0.9rem;
+            color: #bbb;
+        }
+    }
+
+    &:hover {
+        transform: translateY(-8px) scale(1.03);
+        box-shadow:
+            0 25px 60px rgba(0, 0, 0, 0.5),
+            0 0 20px rgba(255, 255, 255, 0.05);
+    }
+}

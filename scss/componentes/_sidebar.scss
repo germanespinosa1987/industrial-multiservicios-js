@@ -1,0 +1,28 @@
+.sidebar {
+    width: 200px;
+    background-color: #222;
+    color: white;
+    padding: 15px;
+    justify-items: center;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(227, 222, 222, 0.3);
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+}
+
+@media (max-width: 991px) {
+    .sidebar {
+        padding: 10px;
+        justify-self: center;
+        margin: 10px;
+        width: 100%;
+        text-align: center;
+        max-width: none;
+        border-radius: 10px;
+        box-shadow: 0 10px 25px rgba(227, 222, 222, 0.3);
+        
+    }
+}
