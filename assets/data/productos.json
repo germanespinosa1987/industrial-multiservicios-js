@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "nombre": "Motores Eléctricos",
+        "descripcion": "Alto rendimiento y eficiencia energética para operación continua en plantas industriales.",
+        "precio": 1250000,
+        "imagen": "../assets/img/motor_electrico.webp"
+    },
+    {
+        "id": 2,
+        "nombre": "Bombas Industriales",
+        "descripcion": "Equipos robustos para el manejo de fluidos en condiciones de alta exigencia.",
+        "precio": 980000,
+        "imagen": "../assets/img/bomba_industrial.webp"
+    },
+    {
+        "id": 3,
+        "nombre": "Tableros Eléctricos",
+        "descripcion": "Sistemas de control y distribución diseñados para máxima seguridad y confiabilidad.",
+        "precio": 650000,
+        "imagen": "../assets/img/teblero_electrico.webp"
+    },
+    {
+        "id": 4,
+        "nombre": "Automatización Industrial",
+        "descripcion": "Optimización de procesos mediante tecnología avanzada y control inteligente.",
+        "precio": 2100000,
+        "imagen": "../assets/img/automatizacion_industrial.webp"
+    },
+    {
+        "id": 5,
+        "nombre": "Sensores Industriales",
+        "descripcion": "Monitoreo preciso de variables críticas para garantizar eficiencia operativa.",
+        "precio": 320000,
+        "imagen": "../assets/img/sensores_industriales.webp"
+    },
+    {
+        "id": 6,
+        "nombre": "Equipos de Mantenimiento",
+        "descripcion": "Herramientas y soluciones para mantenimiento preventivo y correctivo.",
+        "precio": 540000,
+        "imagen": "../assets/img/equipos_mantenimiento.webp"
+    }
+]

@@ -22,7 +22,8 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded-4 mi-header" data-aos="fade-down" data-aos-duration="1000">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded-4 mi-header" data-aos="fade-down"
+            data-aos-duration="1000">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#"><img src="../assets/img/logo.webp" width="80" alt="logo"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -56,78 +57,18 @@
             </div>
         </nav>
     </header>
-<main>
-    <section class="productos">
-        <div class="section-header" data-aos="fade-right" data-aos-duration="1000">
-            <h2 class="text-white">Nuestros Productos</h2>
-            <p class="text-secondary">Soluciones confiables para entornos industriales exigentes.</p>
-        </div>
-
-        <div class="grid-productos" data-aos="fade-up" data-aos-duration="1000">
-
-            <!-- Card 1 -->
-            <div class="card-producto">
-                <img src="../assets/img/motor_electrico.webp" alt="Motor eléctrico industrial">
-                <div class="card-content">
-                    <h3>Motores Eléctricos</h3>
-                    <p>Alto rendimiento y eficiencia energética para operación continua en plantas industriales.</p>
-                    <a href="#" class="btn">Ver más</a>
-                </div>
+    <main>
+        <section class="productos">
+            <div class="section-header" data-aos="fade-right" data-aos-duration="1000">
+                <h2 class="text-white">Nuestros Productos</h2>
+                <p class="text-secondary">Soluciones confiables para entornos industriales exigentes.</p>
             </div>
 
-            <!-- Card 2 -->
-            <div class="card-producto">
-                <img src="../assets/img/bomba_industrial.webp" alt="Bomba industrial">
-                <div class="card-content">
-                    <h3>Bombas Industriales</h3>
-                    <p>Equipos robustos para el manejo de fluidos en condiciones de alta exigencia.</p>
-                    <a href="#" class="btn">Ver más</a>
-                </div>
-            </div>
+            <div class="grid-productos" id="contenedor-productos" data-aos="fade-up" data-aos-duration="1000"></div>
 
-            <!-- Card 3 -->
-            <div class="card-producto">
-                <img src="../assets/img/teblero_electrico.webp" alt="Tablero eléctrico">
-                <div class="card-content">
-                    <h3>Tableros Eléctricos</h3>
-                    <p>Sistemas de control y distribución diseñados para máxima seguridad y confiabilidad.</p>
-                    <a href="#" class="btn">Ver más</a>
-                </div>
             </div>
-
-            <!-- Card 4 -->
-            <div class="card-producto">
-                <img src="../assets/img/automatizacion_industrial.webp" alt="Sistema de automatización">
-                <div class="card-content">
-                    <h3>Automatización Industrial</h3>
-                    <p>Optimización de procesos mediante tecnología avanzada y control inteligente.</p>
-                    <a href="#" class="btn">Ver más</a>
-                </div>
-            </div>
-
-            <!-- Card 5 -->
-            <div class="card-producto">
-                <img src="../assets/img/sensores_industriales.webp" alt="Sensores industriales">
-                <div class="card-content">
-                    <h3>Sensores Industriales</h3>
-                    <p>Monitoreo preciso de variables críticas para garantizar eficiencia operativa.</p>
-                    <a href="#" class="btn">Ver más</a>
-                </div>
-            </div>
-
-            <!-- Card 6 -->
-            <div class="card-producto">
-                <img src="../assets/img/equipos_mantenimiento.webp" alt="Equipos de mantenimiento">
-                <div class="card-content">
-                    <h3>Equipos de Mantenimiento</h3>
-                    <p>Herramientas y soluciones para mantenimiento preventivo y correctivo.</p>
-                    <a href="#" class="btn">Ver más</a>
-                </div>
-            </div>
-
-        </div>
-    </section>
-</main>
+        </section>
+    </main>
     <footer class="text-white text-center p-4 mt-5 mi-footer" data-aos="fade-up" data-aos-duration="1000">
         <h2>Industrial Solutions</h2>
         <p>Soluciones industriales para todas las necesidades.</p>
@@ -142,6 +83,10 @@
     <script>
         AOS.init();
     </script>
+
+    <script src="../assets/js/productos.js"></script>
+    <script src="../assets/js/main.js"></script>
+
 </body>
 
 </html>
