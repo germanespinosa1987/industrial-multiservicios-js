@@ -16,12 +16,25 @@ fetch("../assets/data/productos.json")
                     <p>${producto.descripcion}</p>
                     <p><strong>$ ${producto.precio.toLocaleString("es-AR")}</strong></p>
 
-                    <a href="#" class="btn">
+                    <button
+                        class="btn btn-agregar"
+                        data-id="${producto.id}">
                         Agregar al presupuesto
-                    </a>
+                    </button>
                 </div>
             </div>
         `;
+
+        });
+        const botonesAgregar = document.querySelectorAll(".btn-agregar");
+
+        botonesAgregar.forEach((boton) => {
+
+            boton.addEventListener("click", () => {
+
+                agregarAlPresupuesto(Number(boton.dataset.id));
+
+            });
 
         });
 
