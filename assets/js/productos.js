@@ -1,11 +1,11 @@
+let productos = [];
+
 async function cargarProductos() {
 
     try {
 
         const respuesta = await fetch("../assets/data/productos.json");
-
-        const productos = await respuesta.json();
-
+        productos = await respuesta.json();
         const contenedor = document.getElementById("contenedor-productos");
 
         productos.forEach((producto) => {
@@ -26,19 +26,13 @@ async function cargarProductos() {
             </div>
         </div>
         `;
-
-    const botonesAgregar = document.querySelectorAll(".btn-agregar");
-
-botonesAgregar.forEach((boton) => {
-
-    boton.addEventListener("click", () => {
-        const idProducto = Number(boton.dataset.id);
-        agregarAlPresupuesto(idProducto);
-    });
-
-});
-
 }); 
+    contenedor.addEventListener("click", (e) => {
+        if (e.target.classList.contains("btn-agregar")) {
+            const idProducto = Number(e.target.dataset.id);
+            agregarAlPresupuesto(idProducto);
+        }
+    });
 
     } catch (error) {
         console.error(error);
@@ -48,4 +42,4 @@ botonesAgregar.forEach((boton) => {
 
 cargarProductos();
 
-const productoSeleccionado = productos.find((producto) => producto.id === idProducto);
+
