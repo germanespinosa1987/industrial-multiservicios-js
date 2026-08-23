@@ -35,7 +35,11 @@ async function cargarProductos() {
     });
 
     } catch (error) {
-        console.error(error);
+        swal.fire({
+            icon: "error",
+            title: "Error al cargar los productos",
+            text: "No se pudieron cargar los productos. Intentá recargar la página.",
+        });
     }
 
 }

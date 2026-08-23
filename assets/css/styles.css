@@ -41,7 +41,8 @@ body {
 .mi-header nav ul {
   list-style: none;
   display: flex;
-  column-gap: 10px;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
 }
 .mi-header nav ul li a {
   text-decoration: none;
@@ -85,7 +86,8 @@ main {
 .grilla img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .grilla {
@@ -159,7 +161,8 @@ main {
 .card-base img, .productos .card-producto img, .card-aplicacion img {
   width: 100%;
   height: 180px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .card-base .contenido, .productos .card-producto .contenido, .card-aplicacion .contenido {
   padding: 18px;
@@ -255,7 +258,8 @@ main {
 .productos .card-producto img {
   width: 100%;
   height: 200px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .productos .card-producto .card-content {
   padding: 20px;
@@ -276,6 +280,71 @@ main {
   border-radius: 6px;
   color: #fff;
   text-decoration: none;
+}
+
+.presupuesto {
+  background: #1f1f2e;
+  border-radius: 12px;
+  padding: 24px;
+  margin-top: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+}
+.presupuesto h2 {
+  color: #fff;
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+}
+.presupuesto #lista-presupuesto {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.presupuesto #lista-presupuesto p {
+  color: #bbb;
+  font-size: 0.9rem;
+}
+.presupuesto .item-presupuesto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: background 0.2s ease;
+}
+.presupuesto .item-presupuesto:hover {
+  background: rgba(255, 255, 255, 0.07);
+}
+.presupuesto .item-presupuesto span:first-child {
+  color: #fff;
+  font-size: 0.95rem;
+}
+.presupuesto .item-presupuesto span:last-child {
+  color: #fff;
+  font-weight: 600;
+}
+.presupuesto .btn-eliminar {
+  background: rgba(220, 53, 69, 0.15);
+  color: #ff6b6b;
+  border: 1px solid rgba(220, 53, 69, 0.4);
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  margin-left: 12px;
+  transition: background 0.2s ease;
+}
+.presupuesto .btn-eliminar:hover {
+  background: rgba(220, 53, 69, 0.3);
+}
+.presupuesto #total-presupuesto {
+  color: #fff;
+  text-align: right;
+  font-size: 1.2rem;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .contacto {
@@ -404,6 +473,4 @@ main {
   .productos .grid-productos {
     grid-template-columns: 1fr;
   }
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
