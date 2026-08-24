@@ -68,7 +68,7 @@ listaPresupuesto.addEventListener("click", (e) => {
         const idProducto = Number(e.target.dataset.id);
         eliminarDelPresupuesto(idProducto);
     }
-}); 
+});
 
 function eliminarDelPresupuesto(idProducto) {
     const index = presupuesto.findIndex((producto) => producto.id === idProducto);
@@ -82,3 +82,34 @@ function eliminarDelPresupuesto(idProducto) {
         renderizarPresupuesto();
     }
 }
+
+const btnConfirmar = document.getElementById("btn-confirmar");
+btnConfirmar.addEventListener("click", () => {
+    if (presupuesto.length === 0) {
+        Toast.fire({
+            icon: "warning",
+            title: "No hay productos en el presupuesto",
+        });
+        return;
+    }
+
+    const numeroPedido = Math.floor(Math.random() * 9000) + 1000;
+
+    const resumenHTML = presupuesto.map((producto) => {
+        return `<p>${producto.nombre} x${producto.cantidad} — $ ${(producto.precio * producto.cantidad).toLocaleString("es-AR")}</p>`;
+    }).join("");
+
+    const total = presupuesto.reduce((acumulador, producto) => {
+        return acumulador + (producto.precio * producto.cantidad);
+    }, 0);
+
+    Swal.fire({
+        icon: "success",
+        title: `Pedido #${numeroPedido} confirmado`,
+        html: `${resumenHTML}<hr><strong>Total: $ ${total.toLocaleString("es-AR")}</strong>`,
+    });
+
+    presupuesto.splice(0, presupuesto.length);
+    renderizarPresupuesto();
+
+});
