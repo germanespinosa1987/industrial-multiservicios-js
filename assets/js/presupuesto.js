@@ -6,7 +6,9 @@ const Toast = Swal.mixin({
     timerProgressBar: true,
 });
 
-const presupuesto = [];
+const datosGuardados = localStorage.getItem("presupuesto");
+const presupuesto = datosGuardados ? JSON.parse(datosGuardados) : [];
+
 
 function agregarAlPresupuesto(idProducto) {
     const productoSeleccionado = productos.find((producto) => producto.id === idProducto);
@@ -32,6 +34,8 @@ function agregarAlPresupuesto(idProducto) {
 }
 
 function renderizarPresupuesto() {
+    localStorage.setItem("presupuesto", JSON.stringify(presupuesto));
+
     const contenedor = document.getElementById("lista-presupuesto");
     const totalElemento = document.getElementById("total-presupuesto");
 
@@ -113,3 +117,5 @@ btnConfirmar.addEventListener("click", () => {
     renderizarPresupuesto();
 
 });
+
+renderizarPresupuesto();
